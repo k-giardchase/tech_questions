@@ -2,7 +2,7 @@
 
     require_once __DIR__.'/../src/myDateClass.php';
 
-    class ComitteeTest extends PHPUnit_Framework_TestCase
+    class myDateClassTest extends PHPUnit_Framework_TestCase
     {
         function test_getMM()
         {
@@ -97,7 +97,7 @@
             $this->assertEquals(1991, $result);
         }
 
-        function test_case0()
+        function test_prettyDateCase0()
         {
             //Arrange
             $MM = 10;
@@ -112,7 +112,7 @@
             $this->assertEquals("1992-10-29", $result);
         }
 
-        function test_case1()
+        function test_prettyDateCase1()
         {
             //Arrange
             $MM = 10;
@@ -125,6 +125,21 @@
 
             //Assert
             $this->assertEquals("10-29-1992", $result);
+        }
+
+        function test_prettyDateCase2()
+        {
+            //Arrange
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //Act
+            $result = $test_date->prettyDate(2);
+
+            //Assert
+            $this->assertEquals("October 29, 1992", $result);
         }
     }
 

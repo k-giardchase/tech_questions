@@ -60,7 +60,14 @@
             }
 
             if($num == 2) {
-
+                $m = $this->getMM();
+                $d = $this->getDD();
+                $Y = $this->getYYYY();
+                $originalDate = $Y . '-' . $m . '-' . $d;
+                var_dump($originalDate);
+                $newDate = date("F d, Y", strtotime($originalDate));
+                var_dump($newDate);
+                return $newDate;
             }
 
             if($num == 3) {
