@@ -42,31 +42,35 @@
             $this->YYYY = (int) $new_YYYY;
         }
 
-        // function prettyDate($num)
-        // {
-        //
-        //     if($num == 0) {
-        //
-        //     }
-        //
-        //     if($num == 1) {
-        //
-        //     }
-        //
-        //     if($num == 2) {
-        //
-        //     }
-        //
-        //     if($num == 3) {
-        //
-        //     }
-        //
-        // }
-        //
-        // function today()
-        // {
-        //
-        // }
+        function prettyDate($num)
+        {
+
+            if($num == 0) {
+                $m = $this->getMM();
+                $d = $this->getDD();
+                $Y = $this->getYYYY();
+                return $Y . '-' . $m . '-' . $d;
+
+            }
+
+            if($num == 1) {
+
+            }
+
+            if($num == 2) {
+
+            }
+
+            if($num == 3) {
+
+            }
+
+        }
+
+        function today()
+        {
+
+        }
 
     }
 
