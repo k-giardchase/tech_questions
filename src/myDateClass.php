@@ -44,30 +44,21 @@
 
         function prettyDate($num)
         {
+            $MM = $this->getMM();
+            $DD = $this->getDD();
+            $YYYY = $this->getYYYY();
+            $originalDate = $YYYY . '-' . $MM . '-' . $DD;
 
             if($num == 0) {
-                $MM = $this->getMM();
-                $DD = $this->getDD();
-                $YYYY = $this->getYYYY();
-                return $YYYY . '-' . $MM . '-' . $DD;
+                return $newDate = date("Y-m-d", strtotime($originalDate));
             }
 
             if($num == 1) {
-                $MM = $this->getMM();
-                $DD = $this->getDD();
-                $YYYY = $this->getYYYY();
-                return $MM . '-' . $DD . '-' . $YYYY;
+                return $newDate = date("m-d-Y", strtotime($originalDate));
             }
 
             if($num == 2) {
-                $m = $this->getMM();
-                $d = $this->getDD();
-                $Y = $this->getYYYY();
-                $originalDate = $Y . '-' . $m . '-' . $d;
-                var_dump($originalDate);
-                $newDate = date("F d, Y", strtotime($originalDate));
-                var_dump($newDate);
-                return $newDate;
+                return $newDate = date("F d, Y", strtotime($originalDate));
             }
 
             if($num == 3) {
