@@ -51,18 +51,14 @@
 
             if($num == 0) {
                 return $newDate = date("Y-m-d", strtotime($originalDate));
-            }
-
-            if($num == 1) {
+            } else if($num == 1) {
                 return $newDate = date("m-d-Y", strtotime($originalDate));
-            }
-
-            if($num == 2) {
+            } else if($num == 2) {
                 return $newDate = date("F d, Y", strtotime($originalDate));
-            }
-
-            if($num == 3) {
-
+            } else if($num == 3) {
+                return $newDate = date("The dd of of the month of F, in the year Y");
+            } else {
+                // return "Sorry, that's an invalid selection. Please choose a number ranging from 0 to 3."
             }
 
         }
