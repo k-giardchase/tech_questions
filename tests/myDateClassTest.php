@@ -107,9 +107,24 @@
 
             //Act
             $result = $test_date->prettyDate(0);
-            
+
             //Assert
             $this->assertEquals("1992-10-29", $result);
+        }
+
+        function test_case1()
+        {
+            //Arrange
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //Act
+            $result = $test_date->prettyDate(1);
+
+            //Assert
+            $this->assertEquals("10-29-1992", $result);
         }
     }
 

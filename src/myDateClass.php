@@ -46,15 +46,17 @@
         {
 
             if($num == 0) {
-                $m = $this->getMM();
-                $d = $this->getDD();
-                $Y = $this->getYYYY();
-                return $Y . '-' . $m . '-' . $d;
-
+                $MM = $this->getMM();
+                $DD = $this->getDD();
+                $YYYY = $this->getYYYY();
+                return $YYYY . '-' . $MM . '-' . $DD;
             }
 
             if($num == 1) {
-
+                // $MM = $this->getMM();
+                // $DD = $this->getDD();
+                // $YYYY = $this->getYYYY();
+                // return $MM . '-' . $DD . '-' . $YYYY;
             }
 
             if($num == 2) {
