@@ -7,10 +7,10 @@
         function test_getMM()
         {
             //Arrange
-            $mm = 10;
-            $dd = 29;
-            $yyyy = 1992;
-            $test_date = new myDateClass($mm, $dd, $yyyy);
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
 
             //Act
             $result = $test_date->getMM();
@@ -22,10 +22,10 @@
         function test_setMM()
         {
             //Arrange
-            $mm = 10;
-            $dd = 29;
-            $yyyy = 1992;
-            $test_date = new myDateClass($mm, $dd, $yyyy);
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
 
             //Act
             $test_date->setMM(11);
@@ -38,10 +38,10 @@
         function test_getDD()
         {
             //Arrange
-            $mm = 10;
-            $dd = 29;
-            $yyyy = 1992;
-            $test_date = new myDateClass($mm, $dd, $yyyy);
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
 
             //Act
             $result = $test_date->getDD();
@@ -53,10 +53,10 @@
         function test_setDD()
         {
             //Arrange
-            $mm = 10;
-            $dd = 29;
-            $yyyy = 1992;
-            $test_date = new myDateClass($mm, $dd, $yyyy);
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
 
             //Act
             $test_date->setDD(30);
@@ -69,10 +69,10 @@
         function test_getYYYY()
         {
             //Arrange
-            $mm = 10;
-            $dd = 29;
-            $yyyy = 1992;
-            $test_date = new myDateClass($mm, $dd, $yyyy);
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
 
             //Act
             $result = $test_date->getYYYY();
@@ -84,10 +84,10 @@
         function test_setYYYY()
         {
             //Arrange
-            $mm = 10;
-            $dd = 29;
-            $yyyy = 1992;
-            $test_date = new myDateClass($mm, $dd, $yyyy);
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
 
             //Act
             $test_date->setYYYY(1991);
@@ -95,6 +95,21 @@
 
             //Assert
             $this->assertEquals(1991, $result);
+        }
+
+        function test_case0()
+        {
+            //Arrange
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //Act
+            $result = $test_date->prettyDate(0);
+            
+            //Assert
+            $this->assertEquals("1992-10-29", $result);
         }
     }
 

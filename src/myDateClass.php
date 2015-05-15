@@ -2,39 +2,44 @@
 
     class myDateClass {
 
-        public $mm;
-        public $dd;
-        public $yyyy;
+        public $MM;
+        public $DD;
+        public $YYYY;
 
-        function __construct($mm, $dd, $yyyy) {
-            $this->mm = $mm;
-            $this->dd = $dd;
-            $this->yyyy = $yyyy;
+        function __construct($MM, $DD, $YYYY) {
+            $this->MM = $MM;
+            $this->DD = $DD;
+            $this->YYYY = $YYYY;
         }
 
         function getMM()
         {
-            return $this->mm;
+            return $this->MM;
         }
 
-        function setMM($new_mm)
+        function setMM($new_MM)
         {
-            $this->mm = (int) $new_mm;
+            $this->MM = (int) $new_MM;
         }
 
         function getDD()
         {
-            return $this->dd;
+            return $this->DD;
         }
 
-        function setDD($new_dd)
+        function setDD($new_DD)
         {
-            $this->dd = (int) $new_dd;
+            $this->DD = (int) $new_DD;
         }
 
         function getYYYY()
         {
-            return $this->yyyy;
+            return $this->YYYY;
+        }
+
+        function setYYYY($new_YYYY)
+        {
+            $this->YYYY = (int) $new_YYYY;
         }
 
         // function prettyDate($num)
