@@ -22,6 +22,11 @@
             $this->mm = (int) $new_mm;
         }
 
+        function getDD()
+        {
+            return $this->dd;
+        }
+
         // function prettyDate($num)
         // {
         //
