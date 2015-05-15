@@ -18,6 +18,21 @@
             //Assert
             $this->assertEquals(10, $result);
         }
+
+        function test_getDD()
+        {
+            //Arrange
+            $mm = 10;
+            $dd = 29;
+            $yyyy = 1992;
+            $test_date = new myDateClass($mm, $dd, $yyyy);
+
+            //Act
+            $result = $test_date->getDD();
+
+            //Assert
+            $this->assertEquals(29, $result);
+        }
     }
 
 ?>
