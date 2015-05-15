@@ -32,6 +32,11 @@
             $this->dd = (int) $new_dd;
         }
 
+        function getYYYY()
+        {
+            return $this->yyyy;
+        }
+
         // function prettyDate($num)
         // {
         //
