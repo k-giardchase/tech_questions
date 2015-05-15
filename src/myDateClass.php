@@ -53,10 +53,10 @@
             }
 
             if($num == 1) {
-                // $MM = $this->getMM();
-                // $DD = $this->getDD();
-                // $YYYY = $this->getYYYY();
-                // return $MM . '-' . $DD . '-' . $YYYY;
+                $MM = $this->getMM();
+                $DD = $this->getDD();
+                $YYYY = $this->getYYYY();
+                return $MM . '-' . $DD . '-' . $YYYY;
             }
 
             if($num == 2) {
