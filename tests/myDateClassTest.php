@@ -80,6 +80,22 @@
             //Assert
             $this->assertEquals(1992, $result);
         }
+
+        function test_setYYYY()
+        {
+            //Arrange
+            $mm = 10;
+            $dd = 29;
+            $yyyy = 1992;
+            $test_date = new myDateClass($mm, $dd, $yyyy);
+
+            //Act
+            $test_date->setYYYY(1991);
+            $result = $test_date->getYYYY();
+
+            //Assert
+            $this->assertEquals(1991, $result);
+        }
     }
 
 ?>
