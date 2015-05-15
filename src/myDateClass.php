@@ -27,6 +27,11 @@
             return $this->dd;
         }
 
+        function setDD($new_dd)
+        {
+            $this->dd = (int) $new_dd;
+        }
+
         // function prettyDate($num)
         // {
         //
