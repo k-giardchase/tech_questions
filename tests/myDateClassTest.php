@@ -19,6 +19,22 @@
             $this->assertEquals(10, $result);
         }
 
+        function test_setMM()
+        {
+            //Arrange
+            $mm = 10;
+            $dd = 29;
+            $yyyy = 1992;
+            $test_date = new myDateClass($mm, $dd, $yyyy);
+
+            //Act
+            $test_date->setMM(11);
+            $result = $test_date->getMM();
+
+            //Assert
+            $this->assertEquals(11, $result);
+        }
+
         function test_getDD()
         {
             //Arrange
