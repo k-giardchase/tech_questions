@@ -124,14 +124,14 @@
             $result = $test_date->prettyDate(1);
 
             //Assert
-            $this->assertEquals("10-29-1992", $result);
+            $this->assertEquals("10/29/1992", $result);
         }
 
         function test_prettyDateCase2()
         {
             //Arrange
             $MM = 10;
-            $DD = 29;
+            $DD = 01;
             $YYYY = 1992;
             $test_date = new myDateClass($MM, $DD, $YYYY);
 
@@ -139,7 +139,7 @@
             $result = $test_date->prettyDate(2);
 
             //Assert
-            $this->assertEquals("October 29, 1992", $result);
+            $this->assertEquals("October 1, 1992", $result);
         }
 
         function test_prettyDateCase3()
@@ -177,7 +177,7 @@
             //Arrange
 
             //Act
-            $result = today();
+            $result = myDateClass::today();
 
             //Assert
             $this->assertEquals("2015-05-15", $result);
