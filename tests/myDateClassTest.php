@@ -156,6 +156,21 @@
             //Assert
             $this->assertEquals("The 29th day of the month of October, in the year 1992", $result);
         }
+
+        function test_prettyDateCase4()
+        {
+            //Arrange
+            $MM = 10;
+            $DD = 29;
+            $YYYY = 1992;
+            $test_date = new myDateClass($MM, $DD, $YYYY);
+
+            //Act
+            $result = $test_date->prettyDate(100);
+
+            //Assert
+            $this->assertEquals("Sorry, that's an invalid selection. Please choose a number ranging from 0 to 3.", $result);
+        }
     }
 
 ?>
