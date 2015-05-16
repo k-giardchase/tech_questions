@@ -58,7 +58,7 @@
             } else if($num == 3) {
                 return $new_date = date('\T\h\e jS \d\a\y\ \o\f \t\h\e\ \m\o\n\t\h\ \o\f\ F, \i\n\ \t\h\e \y\e\a\r\ Y', strtotime($original_date));
             } else {
-                // return "Sorry, that's an invalid selection. Please choose a number ranging from 0 to 3."
+                return "Sorry, that's an invalid selection. Please choose a number ranging from 0 to 3.";
             }
 
         }
