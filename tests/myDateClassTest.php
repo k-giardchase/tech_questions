@@ -171,6 +171,17 @@
             //Assert
             $this->assertEquals("Sorry, that's an invalid selection. Please choose a number ranging from 0 to 3.", $result);
         }
+
+        function test_today()
+        {
+            //Arrange
+
+            //Act
+            $result = today();
+
+            //Assert
+            $this->assertEquals("2015-05-15", $result);
+        }
     }
 
 ?>
