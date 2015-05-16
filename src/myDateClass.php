@@ -79,6 +79,7 @@
     $test_case_five = new myDateClass(12, 05, 2015);
 
 ?>
+
 <html>
 <head>
     <title>Pretty Date</title>
@@ -92,7 +93,7 @@
         echo "<p><strong>The Xst day of the month of Month, in the year YYYY:</strong> " . $test_case_one->prettyDate(3) . "</p>";
         echo "<p><strong>Error message:</strong> " . $test_case_one->prettyDate(50) . "</p><br><br>";
     ?>
-    <h2>Test Case One - January 1, 2001</h2>
+    <h2>Test Case Two - February 2, 2002</h2>
     <?php
         echo "<p><strong>YYYY-MM-DD:</strong> " . $test_case_two->prettyDate(0) . "</p>";
         echo "<p><strong>MM/DD/YYYY:</strong> " . $test_case_two->prettyDate(1) . "</p>";
@@ -100,7 +101,7 @@
         echo "<p><strong>The Xst day of the month of Month, in the year YYYY:</strong> " . $test_case_two->prettyDate(3) . "</p>";
         echo "<p><strong>Error message:</strong> " . $test_case_two->prettyDate(50) . "</p><br><br><br>";
     ?>
-    <h2>Test Case One - January 1, 2001</h2>
+    <h2>Test Case Three - March 3, 2003</h2>
     <?php
         echo "<p><strong>YYYY-MM-DD:</strong> " . $test_case_three->prettyDate(0) . "</p>";
         echo "<p><strong>MM/DD/YYYY:</strong> " . $test_case_three->prettyDate(1) . "</p>";
@@ -108,7 +109,7 @@
         echo "<p><strong>The Xst day of the month of Month, in the year YYYY:</strong> " . $test_case_three->prettyDate(3) . "</p>";
         echo "<p><strong>Error message:</strong> " . $test_case_three->prettyDate(50) . "</p><br><br><br>";
     ?>
-    <h2>Test Case One - January 1, 2001</h2>
+    <h2>Test Case Four - April 4, 2004</h2>
     <?php
         echo "<p><strong>YYYY-MM-DD:</strong> " . $test_case_four->prettyDate(0) . "</p>";
         echo "<p><strong>MM/DD/YYYY:</strong> " . $test_case_four->prettyDate(1) . "</p>";
@@ -116,7 +117,7 @@
         echo "<p><strong>The Xst day of the month of Month, in the year YYYY:</strong> " . $test_case_four->prettyDate(3) . "</p>";
         echo "<p><strong>Error message:</strong> " . $test_case_four->prettyDate(50) . "</p><br><br><br>";
     ?>
-    <h2>Test Case One - January 1, 2001</h2>
+    <h2>Test Case Five - December 5, 2015</h2>
     <?php
         echo "<p><strong>YYYY-MM-DD:</strong> " . $test_case_five->prettyDate(0) . "</p>";
         echo "<p><strong>MM/DD/YYYY:</strong> " . $test_case_five->prettyDate(1) . "</p>";
