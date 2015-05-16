@@ -47,16 +47,16 @@
             $MM = $this->getMM();
             $DD = $this->getDD();
             $YYYY = $this->getYYYY();
-            $originalDate = $YYYY . '-' . $MM . '-' . $DD;
+            $original_date = $YYYY . '-' . $MM . '-' . $DD;
 
             if($num == 0) {
-                return $newDate = date("Y-m-d", strtotime($originalDate));
+                return $new_date = date('Y-m-d', strtotime($original_date));
             } else if($num == 1) {
-                return $newDate = date("m-d-Y", strtotime($originalDate));
+                return $new_date = date('m-d-Y', strtotime($original_date));
             } else if($num == 2) {
-                return $newDate = date("F d, Y", strtotime($originalDate));
+                return $new_date = date('F d, Y', strtotime($original_date));
             } else if($num == 3) {
-                return $newDate = date("The dd of of the month of F, in the year Y");
+                return $new_date = date('\T\h\e jS \d\a\y\ \o\f \t\h\e\ \m\o\n\t\h\ \o\f\ F, \i\n\ \t\h\e \y\e\a\r\ Y', strtotime($original_date));
             } else {
                 // return "Sorry, that's an invalid selection. Please choose a number ranging from 0 to 3."
             }
