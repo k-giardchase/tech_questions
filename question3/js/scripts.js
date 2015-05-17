@@ -3,8 +3,7 @@ $(document).ready(function () {
       return $.inArray(value, string) !== -1;
     }, $.validator.format("Please enter '{0}'"));
 
-    $('#myForm').validate({ // initialize the plugin
-        // debug: true
+    $('#myForm').validate({
         rules: {
             email: {
                 required: true,
@@ -22,7 +21,7 @@ $(document).ready(function () {
         messages: {
           email: {
             required: "Please enter an email",
-            email: "Your email address must include an @ character"
+            email: "Your email address must include an '@' and '.' character, as well as a valid domain name"
           },
           number: {
             required: "Please enter a number",
@@ -35,16 +34,22 @@ $(document).ready(function () {
         },
 
         submitHandler: function(form) {
-          $('#myForm').ajaxSubmit({
+          $.ajax({
             type: "POST",
-            data: $(form).serialize(),
-            dataType: 'json',
             url: "process.php",
-            success: function() {
-              console.log("hello");
+            data: $('#myForm').serialize(),
+            dataType: "json",
+            success: function(msg) {
+              $("#formResponse").removeClass('error');
+					    $("#formResponse").removeClass('success');
+					    $("#formResponse").addClass(msg.status);
+              $('#formResponse').html(msg.message);
+              alert('hi');
             },
             error: function() {
-              console.log("Well, this sucks.");
+              $("#formResponse").removeClass('success');
+					    $("#formResponse").addClass('error');
+              $('#formResponse').html("There was an error submitting the form.")
             }
           }); //end ajaxSubmit
 
