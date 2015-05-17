@@ -33,10 +33,10 @@ $(document).ready(function () {
           }
         },
 
-        submitHandler: function(form) {
+        submitHandler: function() {
           $.ajax({
             type: "POST",
-            url: "process.php",
+            url: "../process.php",
             data: $('#validateForm').serialize(),
             dataType: "json",
             success: function(msg) {

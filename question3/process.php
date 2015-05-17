@@ -14,7 +14,6 @@ function checkEmail($email) {
 		if(@fsockopen($Domain, 25, $errno, $errstr, 30)){
 			return TRUE;
 		} else {
-
 			return FALSE;
 		}
 	}
@@ -28,17 +27,25 @@ function checkArtist($artist) {
   }
 }
 
+function checkNumber($number) {
+  if($number >= 1 || $number <= 9999) {
+    return TRUE;
+  } else {
+    return FALSE;
+  }
+}
+
 $response_array = array();
 
-if(empty($_POST['number'])) {
+if(empty($_POST['number']) || !checkNumber($_POST['number'])) {
   $response_array['status'] = 'error';
-  $response_array['message'] = 'Number is blank';
+  $response_array['message'] = 'Number is invalid';
 } elseif(!checkEmail($_POST['email'])) {
   $response_array['status'] = 'error';
-  $response_array['message'] = 'Email is blank or invalid';
-} elseif(empty($_POST['artist'])) {
+  $response_array['message'] = 'Email is invalid';
+} elseif(empty($_POST['artist']) || !checkArtist($_POST['artist'])) {
   $response_array['status'] = 'error';
-  $response_array['message'] = 'Artist is blank';
+  $response_array['message'] = 'Artist is invalid';
 } else {
   $response_array['status'] = 'success';
   $response_array['message'] = 'Success!';
