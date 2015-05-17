@@ -44,10 +44,12 @@ $(document).ready(function () {
 					    $("#formResponse").removeClass('success');
 					    $("#formResponse").addClass(msg.status);
               $('#formResponse').text(msg.message).delay(5000).fadeOut();
-              $('#lyrics').show().delay(5000).fadeOut();
-              $('#artist').val("");
-              $('#email').val("");
-              $('#number').val("");
+              if(msg.message == 'Success!') {
+                $('#lyrics').show().delay(5000).fadeOut();
+                $('#artist').val("");
+                $('#email').val("");
+                $('#number').val("");
+              }
             },
             error: function() {
               $("#formResponse").removeClass('success');
@@ -57,6 +59,5 @@ $(document).ready(function () {
           }); //end ajax
 
         } //end submitHandler
-
-  }); //end validate
+    }); //end validate
 }); //end jQuery
