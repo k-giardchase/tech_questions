@@ -3,7 +3,7 @@ $(document).ready(function () {
       return $.inArray(value, string) !== -1;
     }, $.validator.format("Please enter '{0}'"));
 
-    $('#myForm').validate({
+    $('#validateForm').validate({
         rules: {
             email: {
                 required: true,
@@ -37,21 +37,24 @@ $(document).ready(function () {
           $.ajax({
             type: "POST",
             url: "process.php",
-            data: $('#myForm').serialize(),
+            data: $('#validateForm').serialize(),
             dataType: "json",
             success: function(msg) {
               $("#formResponse").removeClass('error');
 					    $("#formResponse").removeClass('success');
 					    $("#formResponse").addClass(msg.status);
-              $('#formResponse').html(msg.message);
-              alert('hi');
+              $('#formResponse').text(msg.message).delay(5000).fadeOut();
+              $('#lyrics').show().delay(5000).fadeOut();
+              $('#artist').val("");
+              $('#email').val("");
+              $('#number').val("");
             },
             error: function() {
               $("#formResponse").removeClass('success');
 					    $("#formResponse").addClass('error');
-              $('#formResponse').html("There was an error submitting the form.")
+              $('#formResponse').text("There was an error submitting the form.")
             }
-          }); //end ajaxSubmit
+          }); //end ajax
 
         } //end submitHandler
 

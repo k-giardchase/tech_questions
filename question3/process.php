@@ -20,6 +20,14 @@ function checkEmail($email) {
 	}
 }
 
+function checkArtist($artist) {
+  if($artist !== 'Beethoven' && $artist !== 'Josh Groban' && $artist !== 'Nickelback') {
+    return FALSE;
+  } else {
+    return TRUE;
+  }
+}
+
 $response_array = array();
 
 if(empty($_POST['number'])) {
