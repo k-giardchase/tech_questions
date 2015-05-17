@@ -3,30 +3,27 @@
   <head>
       <title>Form Validation</title>
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/styles.css">
       <script src="js/jquery-1.11.2.js"></script>
+      <link href="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js">
       <script src="js/jquery.validate.js"></script>
       <script src="js/additional-methods.js"></script>
       <script src="js/scripts.js"></script>
   </head>
 <body>
   <div class="container">
-    <form id="myForm">
-      <div class="form-group">
+    <form id="myForm" action="process.php" method="POST">
+      <div class="form-group" id="email-group">
         <label for="email">Email Address</label>
         <input type="email" name="email" placeholder="me@me.com">
       </div>
-      <div class="form-group">
+      <div class="form-group" id="number-group">
         <label for="number">Enter a number</label>
         <input type="number" name="number" placeholder="1-9999">
       </div>
-      <div class="form-group">
+      <div class="form-group" id="artist-group">
         <label for="artist">Please select an artist</label>
-          <select id="artist" name="artist" title="Please select one">
-            <option value="">Select...</option>
-            <option value="Beethoven">Beethoven</option>
-            <option value="Josh Groban">Josh Groban</option>
-            <option value="Nickelback">Nickelback</option>
-          </select>
+        <input type="text" name="artist" placeholder="">
       </div>
       <div class="form-group">
       <div class="col-md-9 col-md-offset-3">
@@ -39,6 +36,51 @@
       </div>
   </div>
     </form>
+    <div id="lyrics">
+      <p>Hot sand on toes, cold sand in sleeping bags,
+I've come to know that memories
+Were the best things you ever had
+The summer shone beat down on bony backs
+So far from home where the ocean stood
+Down dust and pine cone tracks
+
+We slept like dogs down by the fire side
+Awoke to the fog all around us
+The boom of summer time
+
+We stood
+Steady as the stars in the woods
+So happy-hearted
+And the warmth rang true inside these bones
+As the old pine fell we sang
+Just to bless the morning.
+
+Hot sand on toes, cold sand in sleeping bags,
+I've come to know the friends around you
+Are all you'll always have
+Smoke in my lungs, or the echoed stone
+Careless and young, free as the birds that fly
+With weightless souls now.
+
+We stood
+Steady as the stars in the woods
+So happy-hearted
+And the warmth rang true inside these bones
+We stood
+Steady as the stars in the woods
+So happy-hearted
+And the warmth rang true inside these bones
+As the old pine fell we sang
+Just to bless the morning.
+
+We grow, grow, steady as the morning
+We grow, grow, older still
+We grow, grow, happy as a new dawn
+We grow, grow, older still
+We grow, grow, steady as the flowers
+We grow, grow, older still
+We grow, grow, happy as a new dawn
+We grow, grow, older still</p></div>
   </div>
 </body>
 </html>
