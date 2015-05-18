@@ -28,7 +28,7 @@ function checkArtist($artist) {
 }
 
 function checkNumber($number) {
-  if($number >= 1 || $number <= 9999) {
+  if($number >= 1 && $number <= 9999) {
     return TRUE;
   } else {
     return FALSE;
