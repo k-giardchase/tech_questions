@@ -16,8 +16,8 @@ and start your server `php -S localhost:8000`<br>
 3. If you would like to edit or run tests, change directories into `questions/question2` and run composer install.
 
 To view question #3,<br>
-1. Start a MAMP, WAMP, or LAMP server.
-2. Set your document root to `questions/question3`
+1. Start a MAMP, WAMP, or LAMP server.<br>
+2. Set your document root to `questions/question3`<br>
 3. Open your web browser and navigate to `localhost:8888`
 
 ##Copyright (c) 2015 Kyle Giard-Chase
