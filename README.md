@@ -12,7 +12,7 @@ Answers to technical interview questions.
 To view question #2,<br>
 1. Start a php server by changing directories into the src folder `cd questions/question2/src`
 and start your server `php -S localhost:8000`<br>
-2. Open your browser and navigate to: `localhost:8000/myDateClass.php`<br><br>
+2. Open your browser and navigate to: `localhost:8000/myDateClass.php`<br>
 3. If you would like to edit or run tests, change directories into `questions/question2` and run composer install.
 
 To view question #3,<br>
